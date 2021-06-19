@@ -1,59 +1,101 @@
-<!-- TODO: Update with your values. -->
-# DocsifyJS Template
-> Starter template for a markdown-based docs site
 
- <!-- TODO: Update repo links and change license type if needed. -->
-[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/docsify-js-template.svg)](https://GitHub.com/MichaelCurrin/docsify-js-template/tags/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/docsify-js-template/blob/master/README#license)
+## Introduction
+WC Product Catalog and/or Inquiry is a multi-purpose WooCommerce plugin to let you set all or selected products in catalog mode by revoking cart and/or hiding price. It also lets you receive inquiry for any product regardless of its catalog mode status by adding an inquiry cart to your store and showing inquiry button for the product. What you call this inquiry (order, request a quote, info query) and which form (Contact Form 7, Gravity Forms, etc.) you use to receive this inquiry is up to you. You can receive inquiry cart's content in the email sent to you by the inquiry form. You can also customize price text and inquiry button label.
 
-[![Made with latest Docsify](https://img.shields.io/npm/v/docsify/latest?label=docsify)](https://docsify.js.org/)
-
-
-<!-- TODO: You can delete the About and Create a Docsify site sections if you create a new project from this template -->
-
-## About
-
-This is a template for a simple but elegant docs site built on _Docsify_ which magically turns your markdown in your `docs` directory into a docs site. 
-
-This is a statically-built site - just commit and push and your Github Pages site will re-deploy.
-
-_Docsify.js_ runs as a _Single-Page Application_ on `index.html` - it relies on JavaScript to pull in content from markdown file, within the app shell. This gives a modern progressive web-app experience for instant page loads. But, this **not** SEO-friendly as crawlers don't like to or can't load JavaScript. So use a static site instead if you need to be found on search engines.
-
-If you want learn about _Docsify_ and how to customize a docs like this, follow this tutorial:
-
-[![teach me - DocsifyJS tutorial](https://img.shields.io/badge/teach_me-DocsifyJS_tutorial-2ea44f)](https://michaelcurrin.github.io/docsify-js-tutorial/#/)
-
-
-## Create a Docsify site
-> How to create your own docs site like this one
-
-Click the button below to create your own copy of this repo.
-
-<div align="center">
-    <a href="https://github.com/MichaelCurrin/docsify-js-template/generate">
-        <img src="https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=for-the-badge" alt="Use this template">
-    </a>
-</div>
-
-Then follow instructions in the original GitHub repo's `README.md` file to setup your own docs site like this one.
-
-<div align="center">
-    <a href="https://github.com/MichaelCurrin/docsify-js-template">
-        <img src="https://img.shields.io/static/v1?label=MichaelCurrin&message=docsify-js-template&color=blue&style=for-the-badge&logo=github" alt="MichaelCurrin - docsify-js-template">
-    </a>
-</div>
-
-
-## Preview
-
-_TODO: Complete with your content - such as a screenshot of your app or command-line usage. You can also rename Preview to Sample._
+### Features
+- For all or selected products
+  - Enable catalog mode
+  - Receive inquiry from registered or guest user
+  - Hide price and/or customize price text
+  - Revoke cart (deny add-to-cart request and hide add-to-cart button)
+  - Show inquiry button and/or customize button label
+- Global and Product level settings
+    - Override global settings at product level or just configure at product level
+- Inquiry Cart Page
+  - Use auto-created inquiry cart page or create a new one
+  - Add inquiry cart to a page using shortcode - *[mwqc_cart]*
+  - Add inquiry form to inquiry cart page using shortcode
+- Inquiry Form
+  - Use any shortcode-rendered form (Contact Form 7, Gravity Forms, etc.) as inquiry form [Details](#inquiry-form "Read more about inquiry form")
+  - Add inquiry cart contents in the email template of the inquiry form using shortcode - *[mwqc_cart_4_email]*
+- Inquiry Button Behavior
+  - If simple product is added to shopping cart via AJAX on shop page, it will also be added to inquiry cart via AJAX on shop page
+  - if user is redirected to shopping cart after add-to-cart, they will also be redirected to inquiry cart after add-to-inquiry
 
 
 ## Installation
 
-_TODO: Add your instructions here or link to an installation.md page._
+### Minimum Requirements
 
+- PHP 7 or greater is recommended
+- Wordpress 5.0 or greater
+- Woocommerce 4.1 or greater
+
+### Manual installation
+
+Manual installation method requires downloading this plugin and uploading it to your web server via your favorite FTP application. The WordPress codex contains [instructions on how to do this here](https://wordpress.org/support/article/managing-plugins/#manual-plugin-installation).
+
+### Updating
+
+Plugin will automatically check for new version and show update notification in Wordpress dashboard with one-click upgrade link.
+
+## Configuration
+
+Plugin let you configure itself at multiple levels. Each level covers a particular set of products. A lower level covers a subset of the products being covered by the level on top of it. These levels are:
+- Global
+- Prodouct Category
+- Product
+
+**Please note:** only Global and Product levels are available as of now (version 1.0.0).
+
+This level based settings make it possible to configure a set of products at a certain level and then override this configuration for a subset of products at a lower level. For example, you can hide price of all products at Global level and show price of selected products by configuring them at Product level.
+
+### Global Level
+- Open "WooCommerce Settings" page in Dashboard (Dashboard -> WooCommerce -> Settings).
+- Switch to "Products" tab and then open "Catalog and/or Inquiry" sub-tab.
+
+![alt Global Settings](https://github.com/wpxqw/mwqc/raw/master/docs/global-settings.jpg)
+
+### Product Level
+- Open "Product Edit" page in Dashboard (Dashboard -> Products).
+- Open the product you want to edit from the product list.
+- Scroll down to data panels and open "Catalog and/or Inquiry" data panel.
+
+![alt Product Settings](https://github.com/wpxqw/mwqc/raw/master/docs/product-settings.jpg)
 
 ## Usage
+- **Configure for all products**
+  - Open "WooCommerce Settings" page in back-end, switch to "Product" tab and then switch to "Catalog and/or Inquiry" sub-tab.
+  - Enable "Configure all products" and based on your requirements for front-end:
+    - Enable "Hide Price" to hide price of all products.
+    - Optionally, set custom text in "Price Text" to show as price.
+    - Enable "Inquiry Button" to show inquiry button for all products.
+    - Optionally, set custom text in "Inquiry Button Label" to show as inquiry button label. Default label is "Add to inquiry".
+    - Enable "Revoke Cart" to deny add-to-cart request and hide "Add to cart" button.
 
-_TODO: Add your instructions here or link to a usage.md page._
+- **Configure individual product or override global settings for that product**
+  - Open "Product Edit" page in back-end, scroll down to data panels and then switch to "Catalog and/or Inquiry" data panel.
+  - Same settings as at global level.
+
+**Note**, External products can not be added to inquiry cart. That's why both global and product level "Inquiry Button" settings will be ignored for them.
+
+- **Add inquiry form to inquiry cart page**
+  - Create form with any form plugin (Contact Form 7, Gravity Forms, etc.)
+  - See form plugin's documentation to know the shortcode to render the form.
+  - Edit inquiry cart page in back-end and add the form shortcode.
+  - Save the inquiry cart page.
+
+- **Receive inquiry cart's contents in the email sent to you by the inquiry form on form submission**
+  - Open inquiry form. 
+  - Add *[mwqc_cart_4_email]* shortcode in its email template.
+  - Save the form.
+
+- **Replace auto-created inquiry cart page**
+  - Add *[mwqc_cart]* shortcode to new page.
+  - Go to global settings as described above and select this new page in "Inquiry Cart Page" dropdown.
+
+## Inquiry Form
+Any  shortcode-rendered form can be used as inquiry form given that it sends email to you on form submission.
+If you want to receive inquiry cart's content in this email, you will need to add *[mwqc_cart_4_email]* shortcode in its email template. To add this shortcode, the inquiry form should support customization of email template and interpretation of shortcode available in the email template.
+All popular WordPress Form plugins send email on form submission. If any Form plugin doesn't directly let you customize email template or interpret shortcode, I shall make it work for my plugin. Please let me know! I have already done it for Contact Form 7.
+Contact Form 7 does not interpret shortcode added to its email template. It has its own mail-tags which look like shortcode. My plugin has necessary code to get my *[mwqc_cart_4_email]* shortcode interpreted by Contact  Form 7.
