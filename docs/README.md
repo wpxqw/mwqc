@@ -1,6 +1,6 @@
 
 ## Introduction
-WC Product Catalog and/or Inquiry is a multi-purpose WooCommerce plugin to let you set all or selected products in catalog mode by revoking cart and/or hiding price. It also lets you receive inquiry for any product regardless of its catalog mode status by adding an inquiry cart to your store and showing inquiry button for the product. What you call this inquiry (order, request a quote, info query) and which form (Contact Form 7, Gravity Forms, etc.) you use to receive this inquiry is up to you. You can receive inquiry cart's content in the email sent to you by the inquiry form. You can also customize price text and inquiry button label.
+WooCommerce Product Catalog and/or Inquiry is a multi-purpose WooCommerce plugin to let you set all or selected products in catalog mode by revoking cart and/or hiding price. It also lets you receive inquiry for any product regardless of its catalog mode status by adding an inquiry cart to your store and showing inquiry button for the product. What you call this inquiry (order, request a quote, info query) and which form (Contact Form 7, Gravity Forms, etc.) you use to receive this inquiry is up to you. You can receive inquiry cart's content in the email sent to you by the inquiry form. You can also customize price text and inquiry button label.
 
 ### Features
 - For all or selected products
