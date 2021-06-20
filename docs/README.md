@@ -1,14 +1,14 @@
 
 ## Introduction
-WooCommerce Product Catalog and/or Inquiry is a multi-purpose WooCommerce plugin to let you set all or selected products in catalog mode by revoking cart and/or hiding price. It also lets you receive inquiry for any product regardless of its catalog mode status by adding an inquiry cart to your store and showing inquiry button for the product. What you call this inquiry (order, request a quote, info query) and which form (Contact Form 7, Gravity Forms, etc.) you use to receive this inquiry is up to you. You can receive inquiry cart's content in the email sent to you by the inquiry form. You can also customize price text and inquiry button label.
+WooCommerce Product Catalog and/or Inquiry is a multi-purpose plugin to let you set all or selected products in catalog mode by revoking cart and/or hiding product price. It also lets you receive inquiry for any product regardless of its catalog mode status by adding an inquiry cart to your store and showing inquiry button for the product. What you call this inquiry (order, request a quote, info query) and which form (Contact Form 7, Gravity Forms, etc.) you use to receive this inquiry is up to you. You can receive inquiry cart's content in the email sent to you by the inquiry form. You can also customize product price text and inquiry button label.
 
 ### Features
 - For all or selected products
   - Enable catalog mode
   - Receive inquiry from registered or guest user
-  - Hide price and/or customize price text
+  - Hide product price and/or customize price text
   - Revoke cart (deny add-to-cart request and hide add-to-cart button)
-  - Show inquiry button and/or customize button label
+  - Show inquiry button and customize button label
 - Global and Product level settings
     - Override global settings at product level or just configure at product level
 - Inquiry Cart Page
@@ -17,7 +17,7 @@ WooCommerce Product Catalog and/or Inquiry is a multi-purpose WooCommerce plugin
   - Add inquiry form to inquiry cart page using shortcode
 - Inquiry Form
   - Use any shortcode-rendered form (Contact Form 7, Gravity Forms, etc.) as inquiry form [Details](#inquiry-form "Read more about inquiry form")
-  - Add inquiry cart contents in the email template of the inquiry form using shortcode - *[mwqc_cart_4_email]*
+  - Add inquiry cart's contents in the email template of the inquiry form using shortcode - *[mwqc_cart_4_email]*
 - Inquiry Button Behavior
   - If simple product is added to shopping cart via AJAX on shop page, it will also be added to inquiry cart via AJAX on shop page
   - if user is redirected to shopping cart after add-to-cart, they will also be redirected to inquiry cart after add-to-inquiry
@@ -64,7 +64,7 @@ This level based settings make it possible to configure a set of products at a c
 ![alt Product Settings](https://github.com/wpxqw/mwqc/raw/master/docs/product-settings.jpg)
 
 ## Usage
-- **Configure for all products**
+- **Configure all products**
   - Open "WooCommerce Settings" page in back-end, switch to "Product" tab and then switch to "Catalog and/or Inquiry" sub-tab.
   - Enable "Configure all products" and based on your requirements for front-end:
     - Enable "Hide Price" to hide price of all products.
@@ -77,7 +77,7 @@ This level based settings make it possible to configure a set of products at a c
   - Open "Product Edit" page in back-end, scroll down to data panels and then switch to "Catalog and/or Inquiry" data panel.
   - Same settings as at global level.
 
-**Note**, External products can not be added to inquiry cart. That's why both global and product level "Inquiry Button" settings will be ignored for them.
+**Note:** External products can not be added to inquiry cart. That's why both global and product level "Inquiry Button" settings will be ignored for them.
 
 - **Add inquiry form to inquiry cart page**
   - Create form with any form plugin (Contact Form 7, Gravity Forms, etc.)
@@ -92,7 +92,7 @@ This level based settings make it possible to configure a set of products at a c
 
 - **Replace auto-created inquiry cart page**
   - Add *[mwqc_cart]* shortcode to new page.
-  - Go to global settings as described above and select this new page in "Inquiry Cart Page" dropdown.
+  - Go to global settings as described above in "Configure all products" section and select this new page in "Inquiry Cart Page" dropdown.
 
 ## Inquiry Form
 Any  shortcode-rendered form can be used as inquiry form given that it sends email to you on form submission.
