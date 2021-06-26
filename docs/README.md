@@ -103,3 +103,20 @@ Any  shortcode-rendered form can be used as inquiry form given that it sends ema
 If you want to receive inquiry cart's content in this email, you will need to add *[mwqc_cart_4_email]* shortcode in its email template. To add this shortcode, the inquiry form should support customization of email template and interpretation of shortcode available in the email template.
 All popular WordPress Form plugins send email on form submission. If any Form plugin doesn't directly let you customize email template or interpret shortcode, I shall make it work for my plugin. Please let me know! I have already done it for Contact Form 7.
 Contact Form 7 does not interpret shortcode added to its email template. It has its own mail-tags which look like shortcode. My plugin has necessary code to get my *[mwqc_cart_4_email]* shortcode interpreted by Contact  Form 7.
+
+## FAQS
+- **How to hide inquiry form when inquiry cart is empty?**  
+Enclose your form's shortcode in my *[mwqc_if_non_empty_cart]* shortcode.  
+Example: ***[mwqc_if_non_empty_cart]***[contact-form-7 id="58"]***[/mwqc_if_non_empty_cart]***
+
+- **How do you prevent inference of hidden-priced product's price from the inquiry cart totals?**  
+By replacing prices in the totals section with the price (replacement) text set in backend for that hidden-priced product.
+
+- **If inquiry cart has multiple hidden-priced products, which product's price text is used in the inquiry cart totals?**  
+The text of the first hidden-priced product that was added to the inquiry cart.
+
+- **Is output of *[mwqc_cart_4_email]* shortcode plain text or HTML?**  
+It is HTML. If inquiry form is made in Contact Form 7, you will need to mark the " Use HTML content type" checkbox on the mail tab on the form edit screen in backend. Gravity Forms by default sends HTML email.
+
+- **Are product prices hidden/visible in the output of *[mwqc_cart_4_email]* shortcode?**  
+This output is a trimmed version of the inquiry cart. If a product price is hidden in the inquiry cart, it will also be hidden in the output of this shortcode. Please note, currently inquiry cart's total and tax are not available in this output.
