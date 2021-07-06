@@ -115,10 +115,10 @@ This section describes how to translate WooCommerce Product Catalog and/or Inqui
 - Install and optionally configure WooCommerce Product Catalog and/or Inquiry.
 
 #### Localize Global Level Settings
-1. Open "Catalog and/or Inquiry" sub-tab of Product tab on WooCommerce Settings page [How to open it](#global-level "Read more about how to open global settings").
+1. Open "Catalog and/or Inquiry" sub-tab of Product tab on WooCommerce Settings page [Read how to open it](#global-level "Read more about how to open global settings").
 2. Make sure, "Price Text" and "Inquiry Button Label" fields are not blank.
-  - WPML doesn't allow translating empty fields.
-  - It doesn't matter whether you leave "Enable Configuration" checked or unchecked.
+   - WPML doesn't allow translating empty fields.
+   - It doesn't matter whether you leave "Enable Configuration" checked or unchecked.
 ![alt Global Settings of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-my-global-settings.jpg)
 3. Open "String Translation" page in Dashboard (Dashboard -> WPML -> String Translation).
 4. Select "admin_texts_mwqc_price_text" from "domain" dropdown to translate "Price Text".
@@ -127,10 +127,10 @@ This section describes how to translate WooCommerce Product Catalog and/or Inqui
 ![alt Translate Global Inquiry Buton Label setting of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-global-inquiry-button-label-translation.jpg)
 
 #### Localize Product Level Settings
-1. Open "Catalog and/or Inquiry" data panel on product edit screen [How to open it](#product-level "Read more about how to open product settings")
+1. Open "Catalog and/or Inquiry" data panel on product edit screen [Read how to open it](#product-level "Read more about how to open product settings")
 2. Make sure, "Price Text" and "Inquiry Button Label" fields are not blank.
-  - WPML doesn't allow translating empty fields.
-  - It doesn't matter whether you leave "Enable Configuration" checked or unchecked.
+   - WPML doesn't allow translating empty fields.
+   - It doesn't matter whether you leave "Enable Configuration" checked or unchecked.
 ![alt Global Settings of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-my-product-settings.jpg)
 3. Open "WooCommerce Multilingual" page in Dashboard (Dashboard -> WooCommerce -> WooCommerce Multilingual).
 4. Make sure you are on Products tab.
@@ -140,6 +140,24 @@ This section describes how to translate WooCommerce Product Catalog and/or Inqui
 7. Translate "Price Text" and "Inquiry Button Label" fields.
 ![alt Translate Product Settings of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-product-translation.jpg)
 
+#### Troubleshoot
+- If "Price Text" and "Inquiry Button Label" fields are not blank and Advanced Translation Editor doesn't show them, resave the product (edit it and click update - it is not necessary to change any thing).
+- if above step doesn't work, open WPML settings page and make sure "_mwqc_settings" field is set to "Translate" under "Custom Fields" section. See [Translating Custom Fields](https://wpml.org/documentation/getting-started-guide/translating-custom-fields/) in WMPL documentation for more info.
+
+#### Localize Messages
+WooCommerce Product Catalog and/or Inquiry plugin shows messages in response to user actions. For example, when user updates the inquiry cart, "Inquiry Cart updated." message is shown. You can translate these messages too.
+1. Open "Theme and plugins localization" page (Dashboard -> WPML -> Theme and plugins localization).
+2. Scroll down to "Strings in the plugins" section.
+3. Select "WooCommerce Product Catalog and/or Inquiry" from the list.
+4. Click "Scan selected plugins for strings" button at the bottom of the list.
+![alt Scan Messages of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-scan-messages.jpg)
+5. After scan is completed, open "String Translation" page in Dashboard (Dashboard -> WPML -> String Translation).
+6. Select "ms-wc-catalog-inquiry" domain from "in domain" dropdown.
+7. WPML will list only the strings of WooCommerce Product Catalog and/or Inquiry plugin.
+8. Translate.
+![alt Translate Messages of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-translate-messages.jpg)
+
+**Note:** After the scan, WPML will show you two domains - ms-wc-catalog-inquiry and woocommerce - next to "WooCommerce Product Catalog and/or Inquiry" in "Strings in the plugins" section. You don't need to translate the string in woocommerce domain because their translation will be provided by the WooCommerce. WPML shows them here because they are being used in "WooCommerce Product Catalog and/or Inquiry" plugin.
 ## FAQS
 - **How to hide inquiry form when inquiry cart is empty?**  
 Enclose your form's shortcode in my *[mwqc_if_non_empty_cart]* shortcode.  
