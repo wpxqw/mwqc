@@ -119,12 +119,26 @@ This section describes how to translate WooCommerce Product Catalog and/or Inqui
 2. Make sure, "Price Text" and "Inquiry Button Label" fields are not blank.
   - WPML doesn't allow translating empty fields.
   - It doesn't matter whether you leave "Enable Configuration" checked or unchecked.
-![alt Global Settings of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-my-global-settings.jpg)  
+![alt Global Settings of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-my-global-settings.jpg)
 3. Open "String Translation" page in Dashboard (Dashboard -> WPML -> String Translation).
 4. Select "admin_texts_mwqc_price_text" from "domain" dropdown to translate "Price Text".
 ![alt Translate Global Price Text setting of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-global-price-text-translation.jpg)
 4. Select "admin_texts_mwqc_add2quote_text" from "domain" dropdown to translate "Inquiry Button Label".
 ![alt Translate Global Inquiry Buton Label setting of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-global-inquiry-button-label-translation.jpg)
+
+#### Localize Product Level Settings
+1. Open "Catalog and/or Inquiry" data panel on product edit screen [How to open it](#product-level "Read more about how to open product settings")
+2. Make sure, "Price Text" and "Inquiry Button Label" fields are not blank.
+  - WPML doesn't allow translating empty fields.
+  - It doesn't matter whether you leave "Enable Configuration" checked or unchecked.
+![alt Global Settings of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-my-product-settings.jpg)
+3. Open "WooCommerce Multilingual" page in Dashboard (Dashboard -> WooCommerce -> WooCommerce Multilingual).
+4. Make sure you are on Products tab.
+5. Add/Edit the translation by clicking the icons in the column showing the country flags.
+![alt WooCommerce Multilingual page](images/wpml-woocommerce-multilingual.jpg)
+6. WPML will open either Advanced Translation Editor or Classic Translation Editor.
+7. Translate "Price Text" and "Inquiry Button Label" fields.
+![alt Translate Product Settings of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-product-translation.jpg)
 
 ## FAQS
 - **How to hide inquiry form when inquiry cart is empty?**  
