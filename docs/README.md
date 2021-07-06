@@ -104,6 +104,28 @@ If you want to receive inquiry cart's content in this email, you will need to ad
 All popular WordPress Form plugins send email on form submission. If any Form plugin doesn't directly let you customize email template or interpret shortcode, I shall make it work for my plugin. Please let me know! I have already done it for Contact Form 7.
 Contact Form 7 does not interpret shortcode added to its email template. It has its own mail-tags which look like shortcode. My plugin has necessary code to get my *[mwqc_cart_4_email]* shortcode interpreted by Contact  Form 7.
 
+## Localization
+WooCommerce Product Catalog and/or Inquiry plugin is localization ready and compatible with WPML.
+
+### WPML
+This section describes how to translate WooCommerce Product Catalog and/or Inquiry plugin in WPML.
+
+#### Prerequisite
+- Install and configure [Woocommerce Multilingual](https://wpml.org/documentation/related-projects/woocommerce-multilingual/).
+- Install and optionally configure WooCommerce Product Catalog and/or Inquiry.
+
+#### Localize Global Level Settings
+1. Open "Catalog and/or Inquiry" sub-tab of Product tab on WooCommerce Settings page [How to open it](#global-level "Read more about how to open global settings").
+2. Make sure, "Price Text" and "Inquiry Button Label" fields are not blank.
+  - WPML doesn't allow translating empty fields.
+  - It doesn't matter whether you leave "Enable Configuration" checked or unchecked.
+![alt Global Settings of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-my-global-settings.jpg)  
+3. Open "String Translation" page in Dashboard (Dashboard -> WPML -> String Translation).
+4. Select "admin_texts_mwqc_price_text" from "domain" dropdown to translate "Price Text".
+![alt Translate Global Price Text setting of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-global-price-text-translation.jpg)
+4. Select "admin_texts_mwqc_add2quote_text" from "domain" dropdown to translate "Inquiry Button Label".
+![alt Translate Global Inquiry Buton Label setting of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-global-inquiry-button-label-translation.jpg)
+
 ## FAQS
 - **How to hide inquiry form when inquiry cart is empty?**  
 Enclose your form's shortcode in my *[mwqc_if_non_empty_cart]* shortcode.  
