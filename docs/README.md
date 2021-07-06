@@ -140,7 +140,7 @@ This section describes how to translate WooCommerce Product Catalog and/or Inqui
 7. Translate "Price Text" and "Inquiry Button Label" fields.
 ![alt Translate Product Settings of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-product-translation.jpg)
 
-#### Troubleshoot
+##### Troubleshoot
 - If "Price Text" and "Inquiry Button Label" fields are not blank and Advanced Translation Editor doesn't show them, resave the product (edit it and click update - it is not necessary to change any thing).
 - if above step doesn't work, open WPML settings page and make sure "_mwqc_settings" field is set to "Translate" under "Custom Fields" section. See [Translating Custom Fields](https://wpml.org/documentation/getting-started-guide/translating-custom-fields/) in WMPL documentation for more info.
 
