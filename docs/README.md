@@ -193,7 +193,7 @@ Yes. If you don't want to allow it, enable "Revoke Cart" for that product.
 Yes. If you don't want to allow it, enable "Revoke Cart" for that product. 
 
 - **Will the price of a hidden-priced product hidden or visible during checkout?**  
-It will be visible. We don't disturb shopping and checkout form in any way.
+It will be visible. We don't disturb shopping cart and checkout form in any way.
 
 - **Is output of *[mwqc_cart_4_email]* shortcode plain text or HTML?**  
 It is HTML. If inquiry form is made in Contact Form 7, you will need to mark the " Use HTML content type" checkbox on the mail tab on the form edit screen in backend. Gravity Forms by default sends HTML email.
