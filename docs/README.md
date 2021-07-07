@@ -186,6 +186,15 @@ By replacing prices in the totals section with the price (replacement) text set 
 - **If inquiry cart has multiple hidden-priced products, which product's price text is used in the inquiry cart totals?**  
 The text of the first hidden-priced product that was added to the inquiry cart.
 
+- **Can customer add a hidden-priced product to shopping cart?**  
+Yes. If you don't want to allow it, enable "Revoke Cart" for that product.
+
+- **Can customer checkout a hidden-priced product?**  
+Yes. If you don't want to allow it, enable "Revoke Cart" for that product. 
+
+- **Will the price of a hidden-priced product hidden or visible during checkout?**  
+It will be visible. We don't disturb shopping and checkout form in any way.
+
 - **Is output of *[mwqc_cart_4_email]* shortcode plain text or HTML?**  
 It is HTML. If inquiry form is made in Contact Form 7, you will need to mark the " Use HTML content type" checkbox on the mail tab on the form edit screen in backend. Gravity Forms by default sends HTML email.
 
