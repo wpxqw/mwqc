@@ -14,6 +14,8 @@ WooCommerce Product Catalog and/or Inquiry is a multi-purpose plugin to let you 
 - Inquiry Cart Page
   - Use auto-created inquiry cart page or create a new one
   - Add inquiry cart to a page using shortcode - *[mwqc_cart]*
+  - Customize inquiry cart by hiding table columns, total section or its rows and/or update button using shortcode's attributes
+  - Customze inquiry cart by overriding its template file in your theme just like any other WooCommerce template
   - Add inquiry form to inquiry cart page using shortcode
 - Inquiry Form
   - Use any shortcode-rendered form (Contact Form 7, Gravity Forms, etc.) as inquiry form [Details](#inquiry-form "Read more about inquiry form")
@@ -125,10 +127,10 @@ Hides the rows of Cart Totals section. Use comma separated row numbers as its va
 WooCommerce Product Catalog and/or Inquiry plugin is localization ready and compatible with WPML.
 
 ### WPML
-This section describes how to translate WooCommerce Product Catalog and/or Inquiry plugin in WPML.
+This section describes how to translate WooCommerce Product Catalog and/or Inquiry plugin in [WPML](https://wpml.org/ "WPML Home Page").
 
 #### Prerequisite
-- Install and configure [Woocommerce Multilingual](https://wpml.org/documentation/related-projects/woocommerce-multilingual/).
+- Install [WPML Multilingual CMS "Buy WPML Multilingual CMS"](https://wpml.org/purchase/) and make sure [Woocommerce Multilingual](https://wpml.org/documentation/related-projects/woocommerce-multilingual/) is activated.
 - Install and optionally configure WooCommerce Product Catalog and/or Inquiry.
 
 #### Localize Global Level Settings
@@ -153,13 +155,13 @@ This section describes how to translate WooCommerce Product Catalog and/or Inqui
 4. Make sure you are on Products tab.
 5. Add/Edit the translation by clicking the icons in the column showing the country flags.
 ![alt WooCommerce Multilingual page](images/wpml-woocommerce-multilingual.jpg)
-6. WPML will open either Advanced Translation Editor or Classic Translation Editor.
+6. Depending on your WPML settings configuration, either the Advanced Translation Editor or Classic Translation Editor will open. Please note: [Advanced Translation Editor](https://wpml.org/documentation/translating-your-contents/advanced-translation-editor/ "WPML Advanced Translation Editor") is the recommended option.
 7. Translate "Price Text" and "Inquiry Button Label" fields.
 ![alt Translate Product Settings of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-product-translation.jpg)
 
 ##### Troubleshoot
 - If "Price Text" and "Inquiry Button Label" fields are not blank and Advanced Translation Editor doesn't show them, resave the product (edit it and click update - it is not necessary to change any thing).
-- if above step doesn't work, open WPML settings page and make sure "_mwqc_settings" field is set to "Translate" under "Custom Fields" section. See [Translating Custom Fields](https://wpml.org/documentation/getting-started-guide/translating-custom-fields/) in WMPL documentation for more info.
+- if above step doesn't work, open WPML settings page and make sure "\_mwqc_settings" field is set to "Translate" under "Custom Fields" section. See [Translating Custom Fields](https://wpml.org/documentation/getting-started-guide/translating-custom-fields/) in WMPL documentation for more info.
 
 #### Localize Messages
 WooCommerce Product Catalog and/or Inquiry plugin shows messages in response to user actions. For example, when user updates the inquiry cart, "Inquiry Cart updated." message is shown. You can translate these messages too.
@@ -175,28 +177,35 @@ WooCommerce Product Catalog and/or Inquiry plugin shows messages in response to 
 ![alt Translate Messages of WooCommerce Product Catalog and/or Inquiry plugin](images/wpml-translate-messages.jpg)
 
 **Note:** After the scan, WPML will show you two domains - ms-wc-catalog-inquiry and woocommerce - next to "WooCommerce Product Catalog and/or Inquiry" in "Strings in the plugins" section. You don't need to translate the string in woocommerce domain because their translation will be provided by the WooCommerce. WPML shows them here because they are being used in "WooCommerce Product Catalog and/or Inquiry" plugin.
+
 ## FAQS
-- **How to hide inquiry form when inquiry cart is empty?**  
-Enclose your form's shortcode in my *[mwqc_if_non_empty_cart]* shortcode.  
+- **How to hide inquiry form when inquiry cart is empty?**
+Enclose your form's shortcode in my *[mwqc_if_non_empty_cart]* shortcode.
 Example: ***[mwqc_if_non_empty_cart]***[contact-form-7 id="58"]***[/mwqc_if_non_empty_cart]***
 
-- **How do you prevent inference of hidden-priced product's price from the inquiry cart totals?**  
+- **How do you prevent inference of hidden-priced product's price from the inquiry cart totals?**
 By replacing prices in the totals section with the price (replacement) text set in backend for that hidden-priced product.
 
-- **If inquiry cart has multiple hidden-priced products, which product's price text is used in the inquiry cart totals?**  
+- **If inquiry cart has multiple hidden-priced products, which product's price text is used in the inquiry cart totals?**
 The text of the first hidden-priced product that was added to the inquiry cart.
 
-- **Can customer add a hidden-priced product to shopping cart?**  
+- **Can customer add a hidden-priced product to shopping cart?**
 Yes. If you don't want to allow it, enable "Revoke Cart" for that product.
 
-- **Can customer checkout a hidden-priced product?**  
-Yes. If you don't want to allow it, enable "Revoke Cart" for that product. 
+- **Will the price of a hidden-priced product hidden or visible during checkout?**
+It will be visible. Plugin doesn't disturb shopping cart and checkout form in any way. Once a product is added to cart, it can be checked out.
 
-- **Will the price of a hidden-priced product hidden or visible during checkout?**  
-It will be visible. We don't disturb shopping cart and checkout form in any way.
+- **Is output of *[mwqc_cart_4_email]* shortcode plain text or HTML?**
+It is HTML. If inquiry form is made in Contact Form 7, you will need to check the "Use HTML content type" checkbox on the mail tab on the form edit screen in backend. Gravity Forms by default sends HTML email.
 
-- **Is output of *[mwqc_cart_4_email]* shortcode plain text or HTML?**  
-It is HTML. If inquiry form is made in Contact Form 7, you will need to mark the " Use HTML content type" checkbox on the mail tab on the form edit screen in backend. Gravity Forms by default sends HTML email.
-
-- **Are product prices hidden/visible in the output of *[mwqc_cart_4_email]* shortcode?**  
+- **Are product prices hidden/visible in the output of *[mwqc_cart_4_email]* shortcode?**
 This output is a trimmed version of the inquiry cart. If a product price is hidden in the inquiry cart, it will also be hidden in the output of this shortcode. Please note, currently inquiry cart's total and tax are not available in this output.
+
+## Changelog
+
+**2021-07-03 - Version 1.0.1**
+  - Made localization ready.
+  - Added WPML Compatibility.
+  - Made layout of the inquiry cart configurable by hiding UI elements (e.g price column, total section) using attributes in [mwqc_cart] shortcode.
+**2021-06-22 - Version 1.0.0**
+  - Initial Release
