@@ -124,7 +124,7 @@ Hides the Cart Totals section. Allowed value is "1".
 Hides the rows of Cart Totals section. Use comma separated row numbers as its value. There are 3 rows, Subtotal, Tax and Total. Allowed value is any non-empty subset of [1,2,3] where 1 represents the Subtotal row and 3 represents the Total row.
 
 ## Localization
-WooCommerce Product Catalog and/or Inquiry plugin is localization ready and compatible with WPML.
+WooCommerce Product Catalog and/or Inquiry plugin is localization ready and compatible with [WPML](https://wpml.org/ "WPML Home Page").
 
 ### WPML
 This section describes how to translate WooCommerce Product Catalog and/or Inquiry plugin in [WPML](https://wpml.org/ "WPML Home Page").
