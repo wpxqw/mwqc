@@ -63,7 +63,7 @@ This level based settings make it possible to configure a set of products at a c
 - Scroll down to data panels and open "Catalog and/or Inquiry" data panel.
 ![alt Woocommerce Quote Inquiry & Management plugin settings](settings.jpg)
 
-### *[mwqc_cart]* Shortcode Attributes
+### Shortcode Attributes
 ```
 [mwqct_cart hide_table="1" hide_table_cols' => "1,2,3,4,5,6" hide_update_button="1" hide_totals="1" hide_total_rows="1,2,3"]
 ```
@@ -103,7 +103,7 @@ Hides the rows of Cart Totals section. Use comma separated row numbers as its va
     - Example: [mwqc_if_non_empty_cart][contact-form-7 id="58"][/mwqc_if_non_empty_cart]
     - Explanation: [contact-form-7 id="58"] shortcode renders the inquiry form. [mwqc_if_non_empty_cart] shortcode hides the inquiry form for empty inquiry cart.
     - Wrapping form shortcode is optional. If not wrapped, your inquiry form will remain visible on inquiry cart page when inquiry cart is empty.
-  - If you want to hide columns of inquiry cart table, update button or total section's rows, add attributes to [mwqc_cart] shortcode [Read More](#configuration "Read more about configuration").
+  - If you want to hide columns of inquiry cart table, update button or total section's rows, add attributes to [mwqc_cart] shortcode [Read More](#shortcode-attributes "Read more about configuration").
   - Save the inquiry cart page.
 
 - **Receive inquiry cart's contents in the email sent to you by the inquiry form on form submission**
