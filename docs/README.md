@@ -14,7 +14,7 @@ WooCommerce Product Catalog and/or Inquiry is a multi-purpose plugin to let you 
 - Inquiry Cart Page
   - Use auto-created inquiry cart page or create a new one
   - Add inquiry cart to a page using shortcode - *[mwqc_cart]*
-  - Customize inquiry cart by hiding table columns, total section or its rows and/or update button using shortcode's attributes
+  - Customize inquiry cart by hiding table columns, total section or its rows and/or update button using [shortcode's attributes](#shortcode-attributes "Read more about shortcode attributes")
   - Customze inquiry cart by overriding its template file in your theme just like any other WooCommerce template
   - Add inquiry form to inquiry cart page using shortcode
 - Inquiry Form
