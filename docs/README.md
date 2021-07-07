@@ -73,11 +73,11 @@ Hides the cart items table. Doesn't effect Cart Totals section. Allowed value is
 - **hide_table_columns**
 Hides the columns of cart items table. Use comma separated column indexes as its value. There are 6 columns. Allowed value is any non-empty subset of [1,2,3,4,5,6], where 1 represents the left most column and 6 represents the right most column.
 - **hide_update_button**
-Hides the Update button.
+Hides the Update button. Allowed value is "1".
 - **hide_totals**
-Hides the Cart Totals section.
+Hides the Cart Totals section. Allowed value is "1".
 - **hide_totals_rows**
-Hides the rows of Cart Totals section. Use comma separated rows numbers as its value. There are 3 rows, Subtotal, Tax and Total. Allowed value is any non-empty subset of [1,2,3] where 1 represents the Subtotal row and 3 represents the Total row.
+Hides the rows of Cart Totals section. Use comma separated row numbers as its value. There are 3 rows, Subtotal, Tax and Total. Allowed value is any non-empty subset of [1,2,3] where 1 represents the Subtotal row and 3 represents the Total row.
 
 ## Usage
 - **Configure for all products**
@@ -103,7 +103,7 @@ Hides the rows of Cart Totals section. Use comma separated rows numbers as its v
     - Example: [mwqc_if_non_empty_cart][contact-form-7 id="58"][/mwqc_if_non_empty_cart]
     - Explanation: [contact-form-7 id="58"] shortcode renders the inquiry form. [mwqc_if_non_empty_cart] shortcode hides the inquiry form for empty inquiry cart.
     - Wrapping form shortcode is optional. If not wrapped, your inquiry form will remain visible on inquiry cart page when inquiry cart is empty.
-  - If you want to hide certain columns of inquiry cart table, update button or total section's rows, add attributes to [mwqc_cart] shortcode. [Read More](#configuration "Read more about configuration).
+  - If you want to hide columns of inquiry cart table, update button or total section's rows, add attributes to [mwqc_cart] shortcode. [Read More](#configuration "Read more about configuration).
   - Save the inquiry cart page.
 
 - **Receive inquiry cart's contents in the email sent to you by the inquiry form on form submission**
