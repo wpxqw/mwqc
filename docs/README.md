@@ -223,9 +223,11 @@ This output is a trimmed version of the inquiry cart. If a product price is hidd
   - Added [mwqc_clear_cart] shortcode. This shortcode can be placed in the confirmation message of the inquiry form to clear the inquiry cart on form submission.
   - Added global setting to customize the name for inquiry cart - e.g reservation cart, inquiry basket.
   - Showed cross-sells of the inquiry cart's products on the inquiry cart page.
+
 **2021-07-03 - Version 1.0.1**
   - Made localization ready.
   - Added WPML Compatibility.
   - Made layout of the inquiry cart configurable by hiding UI elements (e.g price column, total section) using attributes in [mwqc_cart] shortcode.
+
 **2021-06-22 - Version 1.0.0**
   - Initial Release
