@@ -61,7 +61,7 @@ This level based settings make it possible to configure a set of products at a c
 ### Global Level
 - Open "WooCommerce Settings" page in Dashboard (Dashboard -> WooCommerce -> Settings).
 - Switch to "Products" tab and then open "Catalog and/or Inquiry" sub-tab.
-![alt Woocommerce Quote Inquiry & Management plugin settings](global-settings.jpg)
+![alt Woocommerce Quote Inquiry & Management plugin settings](images/global-settings-v1.2.jpg)
 
 ### Product Level
 - Open "Product Edit" page in Dashboard (Dashboard -> Products).
