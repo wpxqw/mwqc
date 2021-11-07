@@ -17,9 +17,13 @@ WooCommerce Product Catalog and/or Inquiry is a multi-purpose plugin to let you 
   - Customize inquiry cart by hiding table columns, total section or its rows and/or update button using [shortcode's attributes](#shortcode-attributes "Read more about shortcode attributes")
   - Customze inquiry cart by overriding its template file in your theme just like any other WooCommerce template
   - Add inquiry form to inquiry cart page using shortcode
+  - Customize inquiry cart name (e.g reservation cart) for front-end
+  - Customize inquiry cart page title and slug (e.g https://webiste.com/reservation-cart)
+  - Show cross-sells of the inquiry cart's products on the inquiry cart page
 - Inquiry Form
   - Use any shortcode-rendered form (Contact Form 7, Gravity Forms, etc.) as inquiry form [Details](#inquiry-form "Read more about inquiry form")
   - Add inquiry cart contents in the email template of the inquiry form using shortcode - *[mwqc_cart_4_email]*
+  - Clear inquiry cart on inquiry form submission using [mwqc_clear_cart] shortcode in the form's confirmation
   - Hide inquiry form for empty inquiry cart by wrapping it in *[mwqc_if_non_empty_cart]* shortcode
 - Inquiry Button Behavior
   - If simple product is added to shopping cart via AJAX on shop page, it will also be added to inquiry cart via AJAX on shop page
@@ -57,13 +61,13 @@ This level based settings make it possible to configure a set of products at a c
 ### Global Level
 - Open "WooCommerce Settings" page in Dashboard (Dashboard -> WooCommerce -> Settings).
 - Switch to "Products" tab and then open "Catalog and/or Inquiry" sub-tab.
-![alt Woocommerce Quote Inquiry & Management plugin settings](settings.jpg)
+![alt Woocommerce Quote Inquiry & Management plugin settings](global-settings.jpg)
 
 ### Product Level
 - Open "Product Edit" page in Dashboard (Dashboard -> Products).
 - Open the product you want to edit from the product list.
 - Scroll down to data panels and open "Catalog and/or Inquiry" data panel.
-![alt Woocommerce Quote Inquiry & Management plugin settings](settings.jpg)
+![alt Woocommerce Quote Inquiry & Management plugin settings](product-settings.jpg)
 
 ## Usage
 - **Configure for all products**
@@ -74,10 +78,12 @@ This level based settings make it possible to configure a set of products at a c
     - Enable "Inquiry Button" to show inquiry button for all products.
     - Optionally, set custom text in "Inquiry Button Label" to show as inquiry button label. Default label is "Add to inquiry".
     - Enable "Revoke Cart" to deny add-to-cart request and hide "Add to cart" button.
+  - Save changes.
 
 - **Configure individual product or override global settings for that product**
   - Open "Product Edit" page in back-end, scroll down to data panels and then switch to "Catalog and/or Inquiry" data panel.
   - Same settings as at global level.
+  - Save product.
 
 **Note**, External products can not be added to inquiry cart. That's why both global and product level "Inquiry Button" settings will be ignored for them.
 
@@ -95,17 +101,28 @@ This level based settings make it possible to configure a set of products at a c
 - **Receive inquiry cart's contents in the email sent to you by the inquiry form on form submission**
   - Open inquiry form. 
   - Add *[mwqc_cart_4_email]* shortcode in its email template.
-  - Save the form.
+  - Save form.
+
+- **Clear inquiry cart on inquiry form submission**
+  - Open inquiry form. 
+  - Add *[mwqc_clear_cart]* shortcode in its confirmation template.
+  - Save form.
 
 - **Replace auto-created inquiry cart page**
   - Add *[mwqc_cart]* shortcode to new page.
   - Go to global settings as described above and select this new page in "Inquiry Cart Page" dropdown.
+  - Save changes.
+
+- **Give a custom name to inquiry cart**
+  - Go to global settings as described above and input new name (e.g reservation cart) in "Inquiry Cart Name" field.
+  - Save changes.
 
 ## Inquiry Form
-Any  shortcode-rendered form can be used as inquiry form given that it sends email to you on form submission.
-If you want to receive inquiry cart's content in this email, you will need to add *[mwqc_cart_4_email]* shortcode in its email template. To add this shortcode, the inquiry form should support customization of email template and interpretation of shortcode available in the email template.
-All popular WordPress Form plugins send email on form submission. If any Form plugin doesn't directly let you customize email template or interpret shortcode, I shall make it work for my plugin. Please let me know! I have already done it for Contact Form 7.
-Contact Form 7 does not interpret shortcode added to its email template. It has its own mail-tags which look like shortcode. My plugin has necessary code to get my *[mwqc_cart_4_email]* shortcode interpreted by Contact  Form 7.
+Any shortcode-rendered form can be used as inquiry form given that it sends email to you on form submission (all popular WordPress Form plugins send email on form submission).
+
+If you want to receive inquiry cart's content in this email, you will need to add *[mwqc_cart_4_email]* shortcode in its email template. To add this shortcode, the inquiry form should support customization of email template and interpretation of shortcode available in the email template. If any Form plugin doesn't directly let you customize email template or interpret shortcode, I shall make it work for my plugin. Please let me know!
+
+Contact Form 7 does not interpret shortcode added to its email and confirmation templates. It has its own mail-tags which look like shortcode. My plugin has necessary code to get my *[mwqc_cart_4_email]* and *[mwqc_clear_cart]* shortcodes interpreted by Contact  Form 7.
 
 ## Shortcode Attributes
 ```
@@ -202,7 +219,10 @@ It is HTML. If inquiry form is made in Contact Form 7, you will need to check th
 This output is a trimmed version of the inquiry cart. If a product price is hidden in the inquiry cart, it will also be hidden in the output of this shortcode. Please note, currently inquiry cart's total and tax are not available in this output.
 
 ## Changelog
-
+**2021-11-07 - Version 1.2.0**
+  - Added [mwqc_clear_cart] shortcode. This shortcode can be placed in the confirmation message of the inquiry form to clear the inquiry cart on form submission.
+  - Added global setting to customize the name for inquiry cart - e.g reservation cart, inquiry basket.
+  - Showed cross-sells of the inquiry cart's products on the inquiry cart page.
 **2021-07-03 - Version 1.0.1**
   - Made localization ready.
   - Added WPML Compatibility.
