@@ -1,5 +1,5 @@
 **Enviornment**
-- WooCommerce 6.3
+- WooCommerce 6.3 or later
 - WooCommerce Product Catalog and/or Inquiry 1.2 or earlier
 
 **Details**
