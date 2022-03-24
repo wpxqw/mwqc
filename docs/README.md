@@ -219,6 +219,9 @@ It is HTML. If inquiry form is made in Contact Form 7, you will need to check th
 This output is a trimmed version of the inquiry cart. If a product price is hidden in the inquiry cart, it will also be hidden in the output of this shortcode. Please note, currently inquiry cart's total and tax are not available in this output.
 
 ## Changelog
+**2022-03-25 - Version 1.2.2**
+ - reloaded inquiry cart page when product is added to cart via ajax from inquiry cart page (e.g. cross-sells). 
+
 **2022-03-20 - Version 1.2.1**
 - Fixed compatibility of [mwqc_cart_4_email] shortcode with WooCommerce 6.3.
 - [Release Notes 1.2.1](./release-notes-1.2.1.md "Release Notes 1.2.1")
