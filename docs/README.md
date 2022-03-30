@@ -126,7 +126,7 @@ Contact Form 7 does not interpret shortcode added to its email and confirmation 
 
 ## Shortcode Attributes
 ```
-[mwqct_cart hide_table="1" hide_table_cols' => "1,2,3,4,5,6" hide_update_button="1" hide_totals="1" hide_total_rows="1,2,3"]
+[mwqct_cart hide_table="1" hide_table_cols="1,2,3,4,5,6" hide_update_button="1" hide_totals="1" hide_total_rows="1,2,3"]
 ```
 
 - **hide_table**
