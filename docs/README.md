@@ -92,10 +92,10 @@ This level based settings make it possible to configure a set of products at a c
   - See form plugin's documentation to know the shortcode to render the form.
   - Edit inquiry cart page in back-end.
   - Add the form shortcode while wrapping it in [mwqc_if_non_empty_cart] shortcode.
-    - Example: [mwqc_if_non_empty_cart][contact-form-7 id="58"][/mwqc_if_non_empty_cart]
-    - Explanation: [contact-form-7 id="58"] shortcode renders the inquiry form. [mwqc_if_non_empty_cart] shortcode hides the inquiry form for empty inquiry cart.
+    - Example: *[mwqc_if_non_empty_cart][contact-form-7 id="58"][/mwqc_if_non_empty_cart]*
+    - Explanation: *[contact-form-7 id="58"]* shortcode renders the inquiry form. *[mwqc_if_non_empty_cart]* shortcode hides the inquiry form for empty inquiry cart.
     - Wrapping form shortcode is optional. If not wrapped, your inquiry form will remain visible on inquiry cart page when inquiry cart is empty.
-  - If you want to hide columns of inquiry cart table, update button or total section's rows, add attributes to [mwqc_cart] shortcode [Read More](#shortcode-attributes "Read more about configuration").
+  - If you want to hide columns of inquiry cart table, update button or total section's rows, add attributes to *[mwqc_cart]* shortcode [Read More](#shortcode-attributes "Read more about configuration").
   - Save the inquiry cart page.
 
 - **Receive inquiry cart's contents in the email sent to you by the inquiry form on form submission**
