@@ -23,7 +23,7 @@ WooCommerce Product Catalog and/or Inquiry is a multi-purpose plugin to let you 
 - Inquiry Form
   - Use any shortcode-rendered form (Contact Form 7, Gravity Forms, etc.) as inquiry form [Details](#inquiry-form "Read more about inquiry form")
   - Add inquiry cart contents in the email template of the inquiry form using shortcode - *[mwqc_cart_4_email]*
-  - Clear inquiry cart on inquiry form submission using [mwqc_clear_cart] shortcode in the form's confirmation
+  - Clear inquiry cart on inquiry form submission using *[mwqc_clear_cart]* shortcode in the form's confirmation
   - Hide inquiry form for empty inquiry cart by wrapping it in *[mwqc_if_non_empty_cart]* shortcode
 - Inquiry Button Behavior
   - If simple product is added to shopping cart via AJAX on shop page, it will also be added to inquiry cart via AJAX on shop page
